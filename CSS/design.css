@@ -1,0 +1,615 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
+
+:root{
+    --background: linear-gradient(135deg, #3b99bbce 0%, #1486afd7 100%);
+    --color-primary: #45a7ca;
+    --color-secondary: #117194fb;
+    --boton-padding: 20px 40px;
+} /*cette variable a plus de specificité*/
+
+body{
+    font-family: 'Raleway', sans-serif;
+}
+
+.container{
+    width:90%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 70px 0px;
+    max-width: 1200px;
+}
+
+.subtitle{
+    color: var(--color-primary);  
+    font-size: 2.0rem;
+    margin-bottom: 35px;
+}
+
+.hero{
+    height: 100vh;
+    background-image: var(--background), url('../Assets/hero.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+}
+
+.hero .container{
+    padding: 0;
+}
+
+.nav{
+    display: flex;
+    justify-content: flex-end;
+    height: 70px;
+    align-items: center;
+    font-weight: 700;
+}
+
+.nav--footer{
+    font-weight: 300;
+    justify-content: flex-start;
+}
+
+.nav__items{
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 10px 15px;
+    font-weight: inherit;
+}
+
+.nav__items--cta{
+    border: 1px solid #fff;
+}
+
+.nav__items--footer{
+    padding: 10px ;
+}
+
+.hero__container{
+    display: flex;
+    height: calc(100vh - 70px);
+    align-items:center;
+    color: #fff;
+}
+
+.hero__texts{
+    width: 80%;
+    margin-bottom: 60px;
+}
+
+.hero__title{
+    font-size: 3.2rem;
+
+
+}
+
+.hero__subtitle{
+    font-size:1.5rem;
+    font-weight: 300;
+    margin: 15px 0;
+}
+
+.hero__wave{
+    position:absolute;
+    bottom: 0; /*comme ca la wave se positionne dans la partie bottom*/
+    left: 0;
+    width: 100%;
+    height: 100px;
+}
+
+.hero__cta{
+    display: inline-block;
+    background: #fff;
+    padding: var(--boton-padding);
+    color: #4398b8;
+    text-decoration: none;
+    border-radius: 40px;
+}
+
+/*about me*/
+.presentation{
+    text-align: center;
+    padding-top: 0; 
+}
+
+.presentation__picture{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.presentation__copy{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.presentation__cta{
+    display:inline-block;
+    margin-top: 30px;
+    background-color: var(--color-primary);
+    color: #fff;
+    text-decoration: none;
+    padding: var(--boton-padding);
+    border-radius: 40px;
+}
+
+.about{
+    min-height: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 80px;
+    justify-items: center;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+.about__img{
+    text-align: center;
+}
+
+.about__img--left{
+    text-align: left;
+}
+
+.about__picture{
+    max-width: 80%;
+}
+
+.about__listecompetences{
+    margin-bottom: 15px;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+.about__compinf{
+    padding-top: 15px;
+    padding-bottom: 15px
+}
+
+.about__formation2{
+    padding-bottom: 15px
+}
+
+/*PARCOURS*/
+.parcours{
+    background: #99c8e4ce;
+    margin-bottom: 0%;
+    
+}
+
+.parcours .container{
+    margin-bottom: 0%;
+    padding-bottom: 0px;
+    
+}
+
+.parcours__grid{
+    display: grid;
+    height: 400px;
+    grid-template-areas: 
+    "img1 img2 img3";
+    gap: 10px;
+}
+
+.parcours__item{
+    position: relative;
+    width: 95%;
+    height: 90%;
+    overflow: hidden;
+}
+
+.parcours__img{
+    width: 100%;
+    height: 80%;
+    object-fit: fill;
+    cursor: pointer; /*quand je pose la souris sur l'image un main apparait*/
+}
+
+.parcours__hover{
+    position: absolute;
+    background: rgba(141, 114, 167, 0.541);
+    top: 0;
+    width: 100%;
+    height: 80%;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(100%)
+}
+
+.parcours__item:hover .parcours__hover{
+    transform: translateX(0%);
+    cursor: pointer;
+    transition: transform .3s ease-in-out;
+}
+
+.parcours__icon{
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+/*experience professionnel*/
+.experiences__grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.experience__item{
+    width: 95%;
+    margin: 5px;
+    background: var(--color-secondary);
+    box-shadow:0 8px 10px rgb(23, 28, 44);
+    border-radius: 7px;
+    padding: 15px 20px;
+    padding-top: 30px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.experience__image{
+    width: 100%;
+}
+
+.experience__poste{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.experience__img{
+    width:100px;
+    min-width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: top;
+    margin-right: 30px;
+}
+
+.experience__name{
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #c4bfcf;
+    font-weight: 700;
+}
+
+.experience__resume{
+    
+    font-weight: 100;
+}
+
+li{padding-left: 10px;
+    padding-bottom: 10px;
+    font-size: 15px;
+}
+
+/*footer*/
+
+.footer{
+    background: var(--color-primary)
+}
+
+.footer__grid{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.footer__title{
+    font-weight: 400;
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.footer__icons{
+    display:flex;
+    justify-content:space-evenly; /*distribution equitative*/
+
+}
+
+.footer__container-icons{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+
+.footer__icon{
+    color: #fff;
+    font-size:30px;
+    text-decoration: none;
+}
+
+.fa-brands.footer__icon{
+    line-height: 60px; /*para centrar el ícono en el círculo siendo específico con la orden(1ra parte nombre del icono)*/
+}
+
+/*RESPONSIVE DESIGN*/
+
+@media screen and (max-width:800px) {
+    :root{
+        --boton-padding: 18px 35px;
+    }
+
+
+.nav{
+    justify-content: space-around;
+}
+
+.nav__items--cta{
+    border: none;
+}
+
+.nav__items{
+    font-weight: 250;
+    border-bottom: 1px solid #fff;
+    margin-right: 7px;
+}
+
+.nav__items--footer{
+    border: none;
+}
+
+.hero__texts{
+    width: 100%;
+    margin-bottom:80px;
+}
+
+.hero__title{
+    font-size:2.5rem;
+}
+
+.hero__subtitle{
+    font-size: 1.5rem;
+}
+
+/*about*/
+
+.presentation__copy{
+    width: 100%;
+}
+
+.about{
+    grid-template-columns: 1fr;
+}
+
+.about.container{
+    padding-top: 20px;
+}
+
+.about__img--left{
+    text-align: center;
+}
+
+.about__texts:last-child{
+    grid-row: 3/4;
+}
+
+/*parcours*/
+
+
+.parcours__grid{
+    height: 200px;
+    gap: 5px;
+    font-size: 0.5rem;
+    grid-template-areas: 
+    "img1 img2 img3";
+}
+
+.parcours__item{
+    position: relative;
+    width: 80%;
+    height: 95%;  
+}
+
+.parcours__img{
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.parcours__hover{
+    position: absolute;
+    background: rgba(141, 114, 167, 0.541);
+    top: 0;
+    width: 100%;
+    height: 80%;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(100%)
+}
+
+.parcours__item:hover .parcours__hover{
+    transform: translateX(0%);
+    cursor: pointer;
+    transition: transform .3s ease-in-out;
+}
+
+/*experience professionnel*/
+.experiences__grid{
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+/*footer*/
+
+.footer__grid{
+    grid-template-columns: 1fr;
+    gap: 2px;
+    margin:5px;
+}
+
+.footer__contact{
+    grid-row: 1/2;
+}
+
+
+.footer__container-icons{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+
+.footer__icon{
+    color: #fff;
+    font-size:30px;
+    text-decoration: none;
+}
+
+.fa-brands.footer__icon{
+    line-height: 50px; /*para centrar el ícono en el círculo siendo específico con la orden(1ra parte nombre del icono)*/
+}
+
+.nav--footer{
+    padding-top: 5px;
+    font-size:0.8rem;   
+    margin-left: 5px;  
+    margin-top: 10px;
+}
+
+}
+
+@media screen and (max-width:500px){
+    :root{
+        --boton-padding:16px 31px;
+    }
+
+    .nav{
+        flex-wrap: wrap;
+        justify-content: space-evenly;  
+        margin-top: 7px;
+    }
+
+    .nav__items{
+        padding: 10px 10px;
+        border: none;
+    }
+
+    .hero__texts{
+        text-align: center;
+        margin-bottom: 100px;
+    }
+
+    .hero__title{
+        font-size: 1.9rem;
+        margin-bottom:30px;
+        margin-top: 60px;
+    }
+
+    .hero__subtitle{
+        font-size: 1.2rem;
+        margin-bottom: 50px;
+    }
+
+/*about*/
+
+.presentation__picture{
+    width: 120px;
+    height: 120px;
+}
+
+.about{
+    row-gap: 50px;
+}
+
+.about.container{
+    padding-top: 10px;
+}
+
+/*parcours*/
+.parcours .container{
+    margin-bottom: 15px;
+    padding-bottom: 30px;
+}
+
+.parcours__grid{
+    grid-template-areas: 
+    "img1"
+    "img2"
+    "img3";
+    display: grid;
+    height: auto;
+    grid-template-rows: repat(3, 250px);
+    gap: 10px;
+}
+
+.parcours__item{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.parcours__img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    cursor: pointer; 
+    align-items: center;
+    
+}
+
+.parcours__hover{
+    position: absolute;
+    background: rgba(141, 114, 167, 0.541);
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(100%);
+}
+
+.parcours__item:hover .parcours__hover{
+    transform: translateX(0%);
+    cursor: pointer;
+    transition: transform .3s ease-in-out;
+}
+
+/*experience professionnel*/
+
+.experience__item{
+    padding: 20px; 
+}
+
+.experience__poste{
+    flex-direction:column;
+    align-items: center;
+}
+
+.experience__img{
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.experience__name{
+    text-align: center;
+}
+
+}
